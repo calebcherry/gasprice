@@ -1,0 +1,19 @@
+[project]
+name = "gasprice"
+version = "0.1.0"
+description = "Fetch today's average gas price from AAA"
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+]
+
+[project.scripts]
+gas_price = "gas_price:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["gas_price.py"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
